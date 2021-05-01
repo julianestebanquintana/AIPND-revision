@@ -44,11 +44,14 @@ def get_input_args():
     parser = argparse.ArgumentParser()
 
     # Argument 1: that's a path to a folder
-
     parser.add_argument('--dir', type=str, default='pet_images/',
         help='path to the folder of pet images')
+
+    # Argument 2: choose between three available models of CNN
     parser.add_argument('--arch', type=str, default='arch',
         help='CNN model architecture, from 3 available models')
+
+    # Argument 3: provide a text file with the dog names
     parser.add_argument('--dogfile', type=str, default='dognames.txt',
         help='text file with dog names')
 
