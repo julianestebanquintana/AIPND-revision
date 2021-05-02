@@ -43,12 +43,13 @@ def get_pet_labels(image_dir):
          index 0 = pet image label (string)
     """
     filename_list = listdir(image_dir)
-    # print(filename_list)
-    # results_dic = dict()
-
+    # return filename_list
+    results_dic = dict()
+    for file in filename_list:
+        results_dic['file']: 'file'
     # for file in image_dir:
     #     results_dic['file']= []
     # Replace None with the results_dic dictionary that you created with this
     # function
     # return results_dic
-    return filename_list
+    return results_dic
