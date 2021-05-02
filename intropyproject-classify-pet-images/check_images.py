@@ -50,7 +50,8 @@ def main():
     # the collection of these command line arguments from the function call as
     # the variable in_arg
     in_arg = get_input_args()
-
+    # print(in_arg)
+    # print(in_arg.dir)
     # Function that checks command line arguments using in_arg
     check_command_line_arguments(in_arg)
 
@@ -59,11 +60,11 @@ def main():
     # in the function call with in_arg.dir  Once you have done the replacements
     # your function call should look like this:
     #             get_pet_labels(in_arg.dir)
-    # This function creates the results dictionary that contains the results, 
+    # This function creates the results dictionary that contains the results,
     # this dictionary is returned from the function call as the variable results
     results = get_pet_labels(in_arg.dir)
-
-    # Function that checks Pet Images in the results Dictionary using results    
+    print(results)
+    # Function that checks Pet Images in the results Dictionary using results
     check_creating_pet_image_labels(results)
 
     # TODO 3: Define classify_images function within the file classify_images.py
@@ -80,23 +81,23 @@ def main():
     check_classifying_images(results)
 
     # TODO 4: Define adjust_results4_isadog function within the file adjust_results4_isadog.py
-    # Once the adjust_results4_isadog function has been defined replace 'None' 
+    # Once the adjust_results4_isadog function has been defined replace 'None'
     # in the function call with in_arg.dogfile  Once you have done the
     # replacements your function call should look like this:
     #          adjust_results4_isadog(results, in_arg.dogfile)
-    # Adjusts the results dictionary to determine if classifier correctly 
-    # classified images as 'a dog' or 'not a dog'. This demonstrates if 
+    # Adjusts the results dictionary to determine if classifier correctly
+    # classified images as 'a dog' or 'not a dog'. This demonstrates if
     # model can correctly classify dog images as dogs (regardless of breed)
     adjust_results4_isadog(results, None)
 
     # Function that checks Results Dictionary for is-a-dog adjustment using results
     check_classifying_labels_as_dogs(results)
 
-    # TODO 5: Define calculates_results_stats function within the file 
+    # TODO 5: Define calculates_results_stats function within the file
     # calculates_results_stats.py
     # This function creates the results statistics dictionary that contains a
     # summary of the results statistics (this includes counts & percentages). This
-    # dictionary is returned from the function call as the variable results_stats    
+    # dictionary is returned from the function call as the variable results_stats
     # Calculates results of run and puts statistics in the Results Statistics
     # Dictionary - called results_stats
     results_stats = calculates_results_stats(results)
@@ -105,9 +106,9 @@ def main():
     check_calculating_results(results, results_stats)
 
     # TODO 6: Define print_results function within the file print_results.py
-    # Once the print_results function has been defined replace 'None' 
-    # in the function call with in_arg.arch  Once you have done the 
-    # replacements your function call should look like this: 
+    # Once the print_results function has been defined replace 'None'
+    # in the function call with in_arg.arch  Once you have done the
+    # replacements your function call should look like this:
     #      print_results(results, results_stats, in_arg.arch, True, True)
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
@@ -122,7 +123,6 @@ def main():
         str(int((tot_time/3600)))+":"+str(int((tot_time % 3600)/60))+":"
         + str(int((tot_time % 3600) % 60)))  # noqa: E128
 
-# noqa: W293
 
 # Call to main function to run the program
 if __name__ == "__main__":
