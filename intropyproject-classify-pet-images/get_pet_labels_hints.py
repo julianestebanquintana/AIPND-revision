@@ -71,14 +71,14 @@ def get_pet_labels(image_dir):
             #     extracted dog breed name in the variable pet_label
             #     that's created as an empty string ABOVE
 
-            # creating a regular expression to check if the string pet labels
-            # contains number
-            # r = re.compile(r'(?P<numbers>\d*)(?P<rest>.*)')
+            # RegEx for number elimination from filenames
             m = re.search('\d+', in_files[idx]).group(0)
-            # format the pet_label
-            # removing white space, remove .extension, remove existing and
+
+            # pet_label formating:
+            # removing white space, removing .extension, removing existing and
             # trailing space, convert to lower, remove number from the string
-            pet_label = in_files[idx].replace(m,' ').replace('_',' ').split('.')[0].strip().lower()
+            pet_label = in_files[idx].replace(m, ' ').replace('_', ' ')\
+                .split('.')[0].strip().lower()
 
             # If filename doesn't already exist in dictionary add it and it's
             # pet label - otherwise print an error message because indicates
@@ -87,9 +87,9 @@ def get_pet_labels(image_dir):
                 results_dic[in_files[idx]] = [pet_label]
 
             else:
-                print("** Warning: Duplicate files exist in directory:", 
-                    in_files[idx])
- 
+                print("** Warning: Duplicate files exist in directory:",
+                      in_files[idx])
+
     # TODO 2b. Replace None with the results_dic dictionary that you created
     # with this function
     return results_dic
