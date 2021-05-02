@@ -31,7 +31,7 @@ from print_functions_for_lab_checks import *
 
 # Imports functions created for this program
 from get_input_args import get_input_args
-from get_pet_labels_hints import get_pet_labels
+from get_pet_labels import get_pet_labels
 from classify_images import classify_images
 from adjust_results4_isadog import adjust_results4_isadog
 from calculates_results_stats import calculates_results_stats
@@ -63,7 +63,7 @@ def main():
     # This function creates the results dictionary that contains the results,
     # this dictionary is returned from the function call as the variable results
     results = get_pet_labels(in_arg.dir)
-    print(results)
+
     # Function that checks Pet Images in the results Dictionary using results
     check_creating_pet_image_labels(results)
 
