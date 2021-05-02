@@ -80,7 +80,8 @@ def main():
     # Function that checks Results Dictionary using results
     check_classifying_images(results)
 
-    # TODO 4: Define adjust_results4_isadog function within the file adjust_results4_isadog.py
+    # TODO 4: Define adjust_results4_isadog function within the file 
+    # adjust_results4_isadog.py
     # Once the adjust_results4_isadog function has been defined replace 'None'
     # in the function call with in_arg.dogfile  Once you have done the
     # replacements your function call should look like this:
@@ -120,8 +121,8 @@ def main():
     # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
     tot_time = end_time - start_time
     print("\n** Total Elapsed Runtime:",
-        str(int((tot_time/3600)))+":"+str(int((tot_time % 3600)/60))+":"
-        + str(int((tot_time % 3600) % 60)))  # noqa: E128
+          str(int((tot_time/3600)))+":"+str(int((tot_time % 3600)/60))+":"
+        + str(int((tot_time % 3600) % 60)))
 
 
 # Call to main function to run the program
