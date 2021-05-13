@@ -3,7 +3,7 @@
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #
 # PROGRAMMER: JULIAN ESTEBAN QUINTANA PUERTA
-# DATE CREATED: 02/MAY/2021
+# DATE CREATED: 08/MAY/2021
 # REVISED DATE:
 # PURPOSE: Create a function classify_images that uses the classifier function
 #          to create the classifier labels and then compares the classifier
@@ -38,12 +38,12 @@ def classify_images(images_dir, results_dic, model):
     format the classifier labels so that they will match your pet image labels.
     The format will include putting the classifier labels in all lower case
     letters and strip the leading and trailing whitespace characters from them.
-    For example, the Classifier function returns = 'Maltese dog, Maltese terrier, Maltese'
-    so the classifier label = 'maltese dog, maltese terrier, maltese'.
-    Recall that dog names from the classifier function can be a string of dog
-    names separated by commas when a particular breed of dog has multiple dog
-    names associated with that breed. For example, you will find pet images of
-    a 'dalmatian'(pet label) and it will match to the classifier label
+    For example, the Classifier function returns = 'Maltese dog, Maltese
+    terrier, Maltese' so the classifier label = 'maltese dog, maltese terrier,
+    maltese'.Recall that dog names from the classifier function can be a string
+    of dog names separated by comas when a particular breed of dog has multiple
+    dog names associated with that breed. For example, you will find pet images
+    of a 'dalmatian'(pet label) and it will match to the classifier label
     'dalmatian, coach dog, carriage dog' if the classifier function correctly
     classified the pet images of dalmatians.
      PLEASE NOTE: This function uses the classifier() function defined in
@@ -66,5 +66,5 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.
     """
-
+    classifier(img_path, model_name)
     None
